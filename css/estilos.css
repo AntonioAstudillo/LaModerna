@@ -1,0 +1,485 @@
+/*Estilos Globales*/
+html {
+  font-size: 62.5%;
+  /*Reset para REMS */
+}
+
+body {
+  font-family: "Arial Unicode MS", "Georgia";
+  /*Se aplica en el body para que no tengamos que aplicarlos a cada elemento por separado*/
+  line-height: 2;
+}
+
+.color {
+  color: #14D7DC;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2.0rem;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+/*Estos estilos son para mi logotipo*/
+.utilidad-a {
+  text-decoration: none;
+  color: black;
+}
+
+.utilidad-a span {
+  color: #03E1FB;
+}
+
+/*Finaliza estilos para logotipo*/
+.contenedor {
+  max-width: 150rem;
+  /*toma todo el espacio disponible hasta 1200 */
+  margin: 0 auto;
+}
+
+/*utilidades*/
+.seccion {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/*Codigo Del Header*/
+.contenido-header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contenido-header h1 {
+  color: black;
+  padding-bottom: 2rem;
+  /*Padding es espacio hacia adentro del elemento y margin es separacion entre elementos*/
+  max-width: 50rem;
+  line-height: 2;
+}
+
+.barra {
+  /*aplico flexBox*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*Me permite alinear*/
+}
+
+.navegacion {
+  padding-top: 1.4rem;
+  padding-bottom: 10px;
+}
+
+.navegacion a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin-right: 1.9rem;
+  font-family: 'Cooper Black', Broadway;
+}
+
+.navegacion a:hover {
+  color: #03B1B6;
+}
+
+.navegacion a:last-of-type {
+  margin-right: 0;
+}
+
+/*section hero banner*/
+.banner {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background: url(../img/banner/reunion.jpg);
+  animation: banner 28s infinite linear;
+}
+
+.banner-contenido {
+  color: #fff;
+  width: 30%;
+  padding-top: 170px;
+}
+
+.banner-contenido span {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.banner-contenido h1 {
+  margin-bottom: 10px;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-family: sans-serif;
+}
+
+.banner-contenido p {
+  margin-bottom: 40px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.banner-contenido a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  margin: auto;
+  background-color: #0A797C;
+  border: 1px solid #156785;
+  transition: all .3s ease-in-out;
+}
+
+.banner-contenido a:hover {
+  background-color: #FFF;
+  color: #0A797C;
+}
+
+/*desarrollando slider*/
+@keyframes banner {
+  0% {
+    background: url(../img/banner/reunion.jpg);
+  }
+
+  25% {
+    background: url(../img/banner/reunion.jpg);
+  }
+
+  26% {
+    background: url(../img/banner/taza.jpg);
+  }
+
+  50% {
+    background: url(../img/banner/taza.jpg);
+  }
+
+  51% {
+    background: url(../img/banner/libreta.jpg);
+  }
+
+  75% {
+    background: url(../img/banner/libreta.jpg);
+  }
+
+  76% {
+    background: url(../img/banner/escribir.jpg);
+  }
+
+  100% {
+    background: url(../img/banner/escribir.jpg);
+  }
+}
+
+/*Posicionar el texto*/
+.banner-texto-div {
+  display: grid;
+  border: 0px solid #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: stretch;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.banner-contenido .boton-banner {
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 40;
+  border-radius: 20px;
+  font-style: italic;
+}
+
+/*Iconos Nosotros*/
+.nosotros {
+  display: flex;
+  justify-content: space-between;
+  /*codigo necesario para eliminar la barra de scroll de firefox*/
+  overflow: hidden;
+}
+
+.iconos {
+  flex-basis: calc(33.3% - 1rem);
+  text-align: center;
+  font-size: 1.2rem;
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.iconos p {
+  line-height: 1.9;
+}
+
+.iconos a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.6rem;
+  ;
+  margin-top: 1.6rem;
+  color: #2fb4cc;
+  border: 1px solid #2fb4cc;
+  border-radius: 4px;
+  transition: all 400ms ease;
+}
+
+.iconos:hover a {
+  background: #0E9AA9;
+}
+
+.iconos:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translate(-3%);
+}
+
+.iconos a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  margin: auto;
+  background-color: #0A797C;
+  border: 2px solid #156785;
+}
+
+/*---Carousel---*/
+.carousel {
+  position: relative;
+}
+
+.carousel-anterior, .carousel-siguiente {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  background-color: black;
+  color: white;
+  opacity: 20%;
+}
+
+.carousel-anterior {
+  left: -30px;
+}
+
+.carousel-siguiente {
+  right: -10px;
+}
+
+/*carousel nosotros*/
+.carousel-anterior-nosotros, .carousel-siguiente-nosotros {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  background-color: black;
+  color: white;
+  opacity: 20%;
+}
+
+.carousel-anterior-nosotros {
+  left: -30px;
+}
+
+.carousel-siguiente-nosotros {
+  right: -10px;
+}
+
+.carousel-indicadores .glider-dot {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #0A797C;
+  opacity: .2;
+  border-radius: 0;
+}
+
+.carousel-indicadores .glider-dot:hover {
+  opacity: .5;
+}
+
+.carousel-indicadores .glider-dot.active {
+  opacity: 1;
+}
+
+.carousel-indicadores-nosotros .glider-dot {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #0A797C;
+  opacity: .2;
+  border-radius: 0;
+}
+
+.carousel-indicadores-nosotros .glider-dot:hover {
+  opacity: .5;
+}
+
+.carousel-indicadores-nosotros .glider-dot.active {
+  opacity: 1;
+}
+
+.tarjetas {
+  justify-content: center;
+  /*codigo necesario para eliminar la barra de scroll de firefox*/
+  overflow: hidden;
+}
+
+/*Codigo comentando ya que para esta implementacion(carousel) ya no me sirven estas propiedades*/
+/*
+.tarjeta{
+  padding: 1.4rem;;
+  margin-top: 1.4rem;
+  width: 100%;
+
+}
+*/
+.tarjeta img {
+  width: 85%;
+}
+
+.tarjeta img:hover {
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+/*aqui empieza todo lo del footer*/
+footer {
+  width: 100%;
+  background: #202020;
+  color: white;
+  font-family: "Arial Unicode MS", "Georgia";
+}
+
+.contenedor-footer-todo {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+
+.contenedor-cuerpo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.columna-compañia {
+  max-width: 400px;
+}
+
+.columna-compañia h1 {
+  font-size: 22px;
+}
+
+.columna-compañia p {
+  font-size: 14px;
+  color: black;
+  margin-top: 20px;
+}
+
+.columna-redes {
+  max-width: 400px;
+}
+
+.columna-redes h1 {
+  font-size: 22px;
+}
+
+.fila {
+  margin-top: 20px;
+  display: flex;
+}
+
+.fila img {
+  width: 36px;
+  height: 36px;
+}
+
+.fila label {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: black;
+}
+
+.informacion-contacto {
+  max-width: 400px;
+}
+
+.informacion-contacto h1 {
+  font-size: 22px;
+}
+
+.fila2 {
+  margin-top: 20px;
+  display: flex;
+}
+
+.fila2 img {
+  width: 36px;
+  height: 36px;
+}
+
+.fila2 label {
+  margin-top: 10px;
+  margin-left: 20px;
+  max-width: 140px;
+}
+
+.contenedor-footer {
+  width: 100%;
+  background: #078C9B;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.copyright {
+  color: black;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.informacion a {
+  text-decoration: none;
+  color: black;
+}
